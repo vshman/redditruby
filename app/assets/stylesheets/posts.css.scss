@@ -1,0 +1,33 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.post {
+	
+	border-bottom: solid 1px #CCC;
+	padding: 10px 0;
+}
+
+.post p {
+	
+	margin: 4px 0;
+}
+
+.post.hover {
+	background: #FAFAFA;
+}
+
+.post .admin {
+	display: none;
+}
+
+.post.hover .admin {
+display: inline;
+}
+
+.post_content {
+	size: 220px;
+}
+
+#newpost {
+	textarea#post_content {width:220px; height: 220px;}
+}

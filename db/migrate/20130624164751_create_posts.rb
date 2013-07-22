@@ -2,7 +2,9 @@ class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
       t.string :title
-      t.text :content
+      t.text :breakfast
+      t.text :lunch
+      t.text :dinner
 
       t.timestamps
     end

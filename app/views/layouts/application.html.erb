@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bistro Blog</title>
+  <title>ZBistro</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <% if alert %>
+    <div class="alert alert-block">
+      <button type="button" class="close" data-dismiss="alert">&times;</button><p><%= alert %></p>
+    </div>
+  <% end %>
 </head>
 <body>
-  <div class="nav">
- 		<ul>
- 			<li><%= link_to "New Post", new_post_path %></li>
-      <li><%= link_to "Log In", new_user_session_path %></li>
-      <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
- 		</ul>
+  <div class="dropdown">
+    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">Admin<span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        <li><%= link_to "New Post", new_post_path %></li>
+        <li><%= link_to "Log In", new_user_session_path %></li>
+        <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </div>
+ 			
+ 		
   </div>
 
 
 <div class="container">
-<%= yield %>
+  <%= yield %>
 </div>
-       <p class="notice"><%= notice %></p>
+   <p class="notice"><%= notice %></p>
+       <script type="text/javascript" src="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>  
+       <script type="text/javascript" src="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>  
+
 </body>
 </html>

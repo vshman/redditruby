@@ -2,9 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .post {
-	
 	border-bottom: solid 1px #CCC;
 	padding: 10px 0;
+	.post-title {
+	font-size: 17px
+	}
 }
 
 .post p {
@@ -32,10 +34,18 @@ display: inline;
 	textarea#post_content {width:220px; height: 220px;}
 }
 
-.nav {
-	margin: 0px 40px 0px 40px;
-	text-align: right;
-	li {
-		display: inline; list-stye-type: none;
+.dropdown {
+    margin: 0px 0px 0px 1240px;
+	position: absolute;
+	
+	.dropdown-menu {
+		position: relative;
+
 	}
 }
+.page-header h1 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 28px;
+}
+
+

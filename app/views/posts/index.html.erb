@@ -1,11 +1,16 @@
 <div class="page-header">
-	<h1>Bistro Blog</h1>
+	<h1>Zbistro IMG</h1>
 </div>
 
 <% @posts.each do |posts| %>
 <div class="post">
-	<strong><%= posts.title %></strong>
-	<p><%= posts.content %>
+	<strong class="post-title"><%= posts.title %></strong>
+	<h2>Breakfast</h2>
+	<p><%= posts.breakfast %></p>
+	<h2>Lunch</h2>
+	<p><%= posts.lunch %></p>
+	<h2>Dinner</h2>
+	<p><%= posts.dinner %></p>
 	<div class="meta">
 		<%= link_to time_ago_in_words(posts.created_at) + " ago", posts %>
 		<span class="admin">

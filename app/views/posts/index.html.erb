@@ -3,20 +3,18 @@
 </div>
 
 <% @posts.each do |posts| %>
-<div class="post">
+<div class="post">	
 	<strong class="post-title"><%= posts.title %></strong>
 	<h2>Breakfast</h2>
 	<p><%= posts.breakfast %></p>
 	<h2>Lunch</h2>
 	<p><%= posts.lunch %></p>
-	<h2>Dinner</h2>
-	<p><%= posts.dinner %></p>
 	<div class="meta">
 		<%= link_to time_ago_in_words(posts.created_at) + " ago", posts %>
 		<span class="admin">
 			<%= link_to "Edit", edit_post_path(posts) %>
 			<%= link_to "Delete", posts, method: :delete, data: {confirm: "Are you sure?"} %>
-		
+		</span>
 	</div>
 </div>
 

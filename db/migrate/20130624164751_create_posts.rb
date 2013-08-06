@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.text :breakfast
       t.text :lunch
-      t.text :dinner
+      t.string :display
 
       t.timestamps
     end

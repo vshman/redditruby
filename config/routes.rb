@@ -5,6 +5,7 @@ Reddit::Application.routes.draw do
 
   resources :posts
   root to: 'posts#index'
+  get  'admin' => 'pages#admin'
   #devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
   # The priority is based upon order of creation:
   # first created -> highest priority.
